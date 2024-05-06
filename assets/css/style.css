@@ -379,17 +379,10 @@ body {
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
- @keyframes breath {
-  0%, 10% { background-size: 170% auto; }
-  50%      { background-size: 150% auto; } /* Only a slight increase */
- }
 
 
 
-@keyframes move {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(20px); }
-} 
+
 
 .hero {
   position: relative;
@@ -459,11 +452,6 @@ body {
   right: 30px;
 }
 
-@keyframes move {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(20px); }
-}
-
 
 
 
@@ -479,6 +467,14 @@ body {
   margin-block-end: 60px;
 }
 
+
+@media screen and (max-width: 990px) {
+  .about-banner {
+    display: none;
+  }
+}
+
+
 .about .abs-img-2 { display: none; }
 
 .about .abs-img-1 {
@@ -487,6 +483,7 @@ body {
   right: 0;
   animation: move 2s ease-in-out infinite alternate;
 }
+
 
 .about :is(.section-title, .section-text) { margin-block-end: 20px; }
 
@@ -575,6 +572,13 @@ body {
 #service {
   margin-bottom: 100px; /* Adjust this value as needed */
 }
+
+@media screen and (max-width: 768px) {
+  .services-list {
+    grid-template-columns: 1fr; /* Change to a single column on smaller screens */
+  }
+}
+
 
 /*-----------------------------------*\
   #PROJECT
